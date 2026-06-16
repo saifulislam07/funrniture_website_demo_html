@@ -465,18 +465,25 @@ function init() {
 function renderSummary() {
   const subtotal = items.reduce((s, i) => s + i.price * i.qty, 0);
 
-  document.getElementById('orderItems').innerHTML = items.map(i => `
-    <div class="order-item">
-      <div class="oi-img"><img src="${i.thumb}" alt="${i.code}" loading="lazy"/></div>
+  document.getElementById('orderItems').innerHTML = items.map(i => {
+    const name  = i.title || i.name  || 'পণ্য';
+    const code  = i.code  || i.id    || '';
+    const brand = i.brand || 'DEMO';
+    const thumb = i.thumb || '';
+    const imgEl = thumb
+      ? `<img src="${thumb}" alt="${code}" loading="lazy"/>`
+      : `<div style="width:100%;height:100%;background:#e8e5de;display:flex;align-items:center;justify-content:center;font-size:.6rem;color:#999;font-weight:600">${code}</div>`;
+    return `<div class="order-item">
+      <div class="oi-img">${imgEl}</div>
       <div class="oi-info">
-        <div class="oi-brand">${i.brand}</div>
-        <div class="oi-name">${i.title}</div>
-        <div class="oi-code">${i.code}</div>
+        <div class="oi-brand">${brand}</div>
+        <div class="oi-name">${name}</div>
+        <div class="oi-code">${code}</div>
         <div class="oi-qty">Qty: ${i.qty}</div>
       </div>
       <div class="oi-price">৳ ${(i.price * i.qty).toLocaleString('en-BD')}</div>
-    </div>
-  `).join('');
+    </div>`;
+  }).join('');
 
   const fmt = n => '৳ ' + n.toLocaleString('en-BD');
   document.getElementById('summarySubtotal').textContent = fmt(subtotal);

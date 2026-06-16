@@ -910,7 +910,16 @@ function renderCart() {
 function goToCheckout() {
   if (cart.length === 0) return;
   localStorage.setItem('checkout_items', JSON.stringify(
-    cart.map(i => ({...PRODUCTS[i.id], id:i.id, qty:i.qty}))
+    cart.map(i => ({
+      id:    i.id,
+      code:  i.id,
+      title: PRODUCTS[i.id].name,
+      name:  PRODUCTS[i.id].name,
+      brand: 'DEMO',
+      price: PRODUCTS[i.id].price,
+      qty:   i.qty,
+      thumb: '',
+    }))
   ));
   window.location.href = 'checkout.html';
 }
