@@ -127,6 +127,57 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 .btn-contact{background:#111;color:#fff}.btn-contact:hover{background:#333}
 .btn-wa-card{background:var(--wa);color:#fff}.btn-wa-card:hover{background:var(--wa-dark)}
 .wa-icon{width:14px;height:14px;fill:currentColor;flex-shrink:0}
+.cart-ic{width:15px;height:15px;flex-shrink:0}
+.btn-atc{background:#fff;border:1.5px solid var(--gray-200);color:#111;flex:1;display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:9px 10px;border-radius:var(--radius);font-size:.78rem;font-weight:600;cursor:pointer;transition:.2s;font-family:inherit}
+.btn-atc:hover{border-color:#111;background:#f9f8f5}
+.btn-buy{background:#111;color:#fff;flex:1;display:inline-flex;align-items:center;justify-content:center;padding:9px 10px;border-radius:var(--radius);font-size:.78rem;font-weight:700;cursor:pointer;transition:.2s;font-family:inherit;border:none}
+.btn-buy:hover{background:#333}
+
+/* CTA BAR */
+.cta-bar{position:fixed;bottom:0;left:0;right:0;z-index:850;background:rgba(255,255,253,.96);backdrop-filter:blur(10px);border-top:1px solid var(--gray-200);padding:10px 20px;display:none;align-items:center;justify-content:center;gap:10px;box-shadow:0 -4px 24px rgba(0,0,0,.1)}
+.cta-bar.show{display:flex}
+.cta-cart-btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:var(--radius);background:var(--gray-100);color:#111;font-size:.84rem;font-weight:600;border:1.5px solid var(--gray-200);cursor:pointer;transition:.2s;position:relative;white-space:nowrap}
+.cta-cart-btn:hover{border-color:#111}
+.cta-badge{position:absolute;top:-7px;right:-7px;background:#e63946;color:#fff;width:18px;height:18px;border-radius:50%;font-size:.6rem;font-weight:700;display:none;align-items:center;justify-content:center}
+.cta-badge.show{display:flex}
+.cta-co-btn{padding:11px 28px;border-radius:var(--radius);background:#111;color:#fff;font-size:.84rem;font-weight:700;border:none;cursor:pointer;transition:.2s;flex:1;max-width:220px}
+.cta-co-btn:hover{background:#333}
+
+/* DRAWER */
+.drawer-ov{position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:950;opacity:0;pointer-events:none;transition:opacity .28s}
+.drawer-ov.open{opacity:1;pointer-events:all}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:370px;max-width:95vw;background:#fff;z-index:960;transform:translateX(100%);transition:transform .3s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column;box-shadow:-6px 0 28px rgba(0,0,0,.12)}
+.drawer.open{transform:none}
+.dhead{padding:16px 18px;border-bottom:1px solid var(--gray-200);display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.dhead h3{font-size:.95rem;font-weight:700;color:#111}
+.dclose{width:32px;height:32px;border-radius:var(--radius);background:var(--gray-100);border:1px solid var(--gray-200);display:flex;align-items:center;justify-content:center;font-size:1rem;cursor:pointer;color:#111;transition:.2s}
+.dclose:hover{background:#111;color:#fff;border-color:#111}
+.dbody{flex:1;overflow-y:auto;padding:14px 18px}
+.dempty{text-align:center;padding:44px 0;color:var(--gray-400)}
+.dempty span{font-size:2.2rem;display:block;margin-bottom:10px}
+.dempty p{font-size:.83rem}
+.citem{display:flex;gap:10px;align-items:flex-start;padding:13px 0;border-bottom:1px solid var(--gray-100)}
+.citem:last-child{border-bottom:none}
+.citem-info{flex:1;min-width:0}
+.citem-name{font-size:.82rem;font-weight:600;color:#111;margin-bottom:1px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.citem-code{font-size:.68rem;color:var(--gray-400);margin-bottom:5px}
+.citem-price{font-size:.84rem;font-weight:700;color:#111}
+.cqty{display:flex;align-items:center;gap:0;margin-top:7px}
+.cqty button{width:26px;height:26px;border:1.5px solid var(--gray-200);background:#fff;border-radius:var(--radius);font-size:.88rem;font-weight:700;color:#111;cursor:pointer;transition:.15s;display:flex;align-items:center;justify-content:center;font-family:inherit}
+.cqty button:hover{border-color:#111;background:#111;color:#fff}
+.cqty-n{min-width:34px;text-align:center;font-size:.82rem;font-weight:600;padding:0 4px}
+.cdel{margin-left:auto;width:26px;height:26px;border:none;background:none;color:#ccc;cursor:pointer;font-size:.95rem;transition:.15s;display:flex;align-items:center;justify-content:center;border-radius:var(--radius)}
+.cdel:hover{color:#e63946;background:#fff0f1}
+.dfoot{padding:14px 18px;border-top:1px solid var(--gray-200);flex-shrink:0}
+.dsub{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.dsub span:first-child{font-size:.8rem;color:var(--gray-600)}
+.dsub strong{font-size:1rem;font-weight:700;color:#111}
+.dco{display:block;width:100%;padding:13px;background:#111;color:#fff;border:none;border-radius:var(--radius);font-size:.86rem;font-weight:700;cursor:pointer;text-align:center;transition:.2s;font-family:inherit}
+.dco:hover{background:#333}
+
+/* TOAST */
+.toast{position:fixed;bottom:76px;left:50%;transform:translateX(-50%) translateY(12px);background:#111;color:#fff;padding:9px 20px;border-radius:var(--radius);font-size:.8rem;font-weight:600;opacity:0;transition:opacity .28s,transform .28s;pointer-events:none;z-index:999;white-space:nowrap}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 
 /* ══ WHY ══ */
 .why-section{
@@ -377,10 +428,8 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
           <div class="pcard-spec"><span>W90×D90 cm</span><span>৪ চেয়ার</span><span>সাদা</span></div>
         </div>
         <div class="pcard-foot">
-          <a href="https://wa.me/8801XXXXXXXXX?text=আমি%20DEMO-001%20মডার্ন%20ডাইনিং%20সেট%20সম্পর্কে%20জানতে%20চাই।" target="_blank" class="btn-wa-card">
-            <svg class="wa-icon" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            যোগাযোগ করুন
-          </a>
+          <button class="btn-atc" onclick="addToCart('DEMO-001')"><svg class="cart-ic" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1h2l2.4 9.6A2 2 0 007.35 12h7.3a2 2 0 001.95-1.4L18 5H5"/><circle cx="8" cy="16.5" r="1.2" fill="currentColor" stroke="none"/><circle cx="15" cy="16.5" r="1.2" fill="currentColor" stroke="none"/></svg>কার্টে যোগ</button>
+          <button class="btn-buy" onclick="buyNow('DEMO-001')">এখনই কিনুন</button>
         </div>
       </div>
 
@@ -398,10 +447,8 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
           <div class="pcard-spec"><span>৩+২ সিটার</span><span>গ্রে ফ্যাব্রিক</span><span>ওয়াশযোগ্য</span></div>
         </div>
         <div class="pcard-foot">
-          <a href="https://wa.me/8801XXXXXXXXX?text=আমি%20DEMO-002%20এল-শেপ%20সোফা%20সম্পর্কে%20জানতে%20চাই।" target="_blank" class="btn-wa-card">
-            <svg class="wa-icon" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            যোগাযোগ করুন
-          </a>
+          <button class="btn-atc" onclick="addToCart('DEMO-002')"><svg class="cart-ic" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1h2l2.4 9.6A2 2 0 007.35 12h7.3a2 2 0 001.95-1.4L18 5H5"/><circle cx="8" cy="16.5" r="1.2" fill="currentColor" stroke="none"/><circle cx="15" cy="16.5" r="1.2" fill="currentColor" stroke="none"/></svg>কার্টে যোগ</button>
+          <button class="btn-buy" onclick="buyNow('DEMO-002')">এখনই কিনুন</button>
         </div>
       </div>
 
@@ -418,10 +465,8 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
           <div class="pcard-spec"><span>King Size</span><span>সলিড উড</span><span>ওয়ালনাট</span></div>
         </div>
         <div class="pcard-foot">
-          <a href="https://wa.me/8801XXXXXXXXX?text=আমি%20DEMO-003%20কিং%20সাইজ%20বেড%20সম্পর্কে%20জানতে%20চাই।" target="_blank" class="btn-wa-card">
-            <svg class="wa-icon" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            যোগাযোগ করুন
-          </a>
+          <button class="btn-atc" onclick="addToCart('DEMO-003')"><svg class="cart-ic" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1h2l2.4 9.6A2 2 0 007.35 12h7.3a2 2 0 001.95-1.4L18 5H5"/><circle cx="8" cy="16.5" r="1.2" fill="currentColor" stroke="none"/><circle cx="15" cy="16.5" r="1.2" fill="currentColor" stroke="none"/></svg>কার্টে যোগ</button>
+          <button class="btn-buy" onclick="buyNow('DEMO-003')">এখনই কিনুন</button>
         </div>
       </div>
 
@@ -439,10 +484,8 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
           <div class="pcard-spec"><span>এডজাস্টেবল</span><span>লেদার</span><span>ব্ল্যাক</span></div>
         </div>
         <div class="pcard-foot">
-          <a href="https://wa.me/8801XXXXXXXXX?text=আমি%20DEMO-004%20এক্সিকিউটিভ%20চেয়ার%20সম্পর্কে%20জানতে%20চাই।" target="_blank" class="btn-wa-card">
-            <svg class="wa-icon" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            যোগাযোগ করুন
-          </a>
+          <button class="btn-atc" onclick="addToCart('DEMO-004')"><svg class="cart-ic" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1h2l2.4 9.6A2 2 0 007.35 12h7.3a2 2 0 001.95-1.4L18 5H5"/><circle cx="8" cy="16.5" r="1.2" fill="currentColor" stroke="none"/><circle cx="15" cy="16.5" r="1.2" fill="currentColor" stroke="none"/></svg>কার্টে যোগ</button>
+          <button class="btn-buy" onclick="buyNow('DEMO-004')">এখনই কিনুন</button>
         </div>
       </div>
 
@@ -459,10 +502,8 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
           <div class="pcard-spec"><span>H180 cm</span><span>৫ তাক</span><span>ওক ফিনিশ</span></div>
         </div>
         <div class="pcard-foot">
-          <a href="https://wa.me/8801XXXXXXXXX?text=আমি%20DEMO-005%20বুকশেলফ%20সম্পর্কে%20জানতে%20চাই।" target="_blank" class="btn-wa-card">
-            <svg class="wa-icon" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            যোগাযোগ করুন
-          </a>
+          <button class="btn-atc" onclick="addToCart('DEMO-005')"><svg class="cart-ic" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1h2l2.4 9.6A2 2 0 007.35 12h7.3a2 2 0 001.95-1.4L18 5H5"/><circle cx="8" cy="16.5" r="1.2" fill="currentColor" stroke="none"/><circle cx="15" cy="16.5" r="1.2" fill="currentColor" stroke="none"/></svg>কার্টে যোগ</button>
+          <button class="btn-buy" onclick="buyNow('DEMO-005')">এখনই কিনুন</button>
         </div>
       </div>
 
@@ -479,10 +520,8 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
           <div class="pcard-spec"><span>৬ পিস</span><span>ভেলভেট</span><span>গোল্ড লেগ</span></div>
         </div>
         <div class="pcard-foot">
-          <a href="https://wa.me/8801XXXXXXXXX?text=আমি%20DEMO-006%20ভেলভেট%20চেয়ার%20সম্পর্কে%20জানতে%20চাই।" target="_blank" class="btn-wa-card">
-            <svg class="wa-icon" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.246-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            যোগাযোগ করুন
-          </a>
+          <button class="btn-atc" onclick="addToCart('DEMO-006')"><svg class="cart-ic" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1h2l2.4 9.6A2 2 0 007.35 12h7.3a2 2 0 001.95-1.4L18 5H5"/><circle cx="8" cy="16.5" r="1.2" fill="currentColor" stroke="none"/><circle cx="15" cy="16.5" r="1.2" fill="currentColor" stroke="none"/></svg>কার্টে যোগ</button>
+          <button class="btn-buy" onclick="buyNow('DEMO-006')">এখনই কিনুন</button>
         </div>
       </div>
 
@@ -500,10 +539,8 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
           <div class="pcard-spec"><span>৪ চেয়ার</span><span>১ টেবিল</span><span>ওয়াটারপ্রুফ</span></div>
         </div>
         <div class="pcard-foot">
-          <a href="https://wa.me/8801XXXXXXXXX?text=আমি%20DEMO-007%20আউটডোর%20সেট%20সম্পর্কে%20জানতে%20চাই।" target="_blank" class="btn-wa-card">
-            <svg class="wa-icon" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            যোগাযোগ করুন
-          </a>
+          <button class="btn-atc" onclick="addToCart('DEMO-007')"><svg class="cart-ic" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1h2l2.4 9.6A2 2 0 007.35 12h7.3a2 2 0 001.95-1.4L18 5H5"/><circle cx="8" cy="16.5" r="1.2" fill="currentColor" stroke="none"/><circle cx="15" cy="16.5" r="1.2" fill="currentColor" stroke="none"/></svg>কার্টে যোগ</button>
+          <button class="btn-buy" onclick="buyNow('DEMO-007')">এখনই কিনুন</button>
         </div>
       </div>
 
@@ -520,10 +557,8 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
           <div class="pcard-spec"><span>W180 cm</span><span>মিরর ডোর</span><span>হোয়াইট</span></div>
         </div>
         <div class="pcard-foot">
-          <a href="https://wa.me/8801XXXXXXXXX?text=আমি%20DEMO-008%20ওয়ার্ডরোব%20সম্পর্কে%20জানতে%20চাই।" target="_blank" class="btn-wa-card">
-            <svg class="wa-icon" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            যোগাযোগ করুন
-          </a>
+          <button class="btn-atc" onclick="addToCart('DEMO-008')"><svg class="cart-ic" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1h2l2.4 9.6A2 2 0 007.35 12h7.3a2 2 0 001.95-1.4L18 5H5"/><circle cx="8" cy="16.5" r="1.2" fill="currentColor" stroke="none"/><circle cx="15" cy="16.5" r="1.2" fill="currentColor" stroke="none"/></svg>কার্টে যোগ</button>
+          <button class="btn-buy" onclick="buyNow('DEMO-008')">এখনই কিনুন</button>
         </div>
       </div>
 
@@ -751,6 +786,35 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
   </div>
 </footer>
 
+<!-- ══ CTA BAR ══ -->
+<div class="cta-bar" id="ctaBar">
+  <button class="cta-cart-btn" onclick="openDrawer()">
+    <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1h2l2.4 9.6A2 2 0 007.35 12h7.3a2 2 0 001.95-1.4L18 5H5"/><circle cx="8" cy="16.5" r="1.2" fill="currentColor" stroke="none"/><circle cx="15" cy="16.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+    কার্ট দেখুন
+    <span class="cta-badge" id="ctaBadge">0</span>
+  </button>
+  <button class="cta-co-btn" onclick="goToCheckout()">চেকআউট &rarr;</button>
+</div>
+
+<!-- ══ DRAWER ══ -->
+<div class="drawer-ov" id="dOv" onclick="closeDrawer()"></div>
+<div class="drawer" id="drawer">
+  <div class="dhead">
+    <h3>আমার কার্ট (<span id="dCount">0</span> টি পণ্য)</h3>
+    <button class="dclose" onclick="closeDrawer()">&#10005;</button>
+  </div>
+  <div class="dbody" id="dBody"></div>
+  <div class="dfoot" id="dFoot" style="display:none">
+    <div class="dsub">
+      <span>মোট সাবটোটাল</span>
+      <strong id="dTotal">৳ ০</strong>
+    </div>
+    <button class="dco" onclick="goToCheckout()">চেকআউটে যান &rarr;</button>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
 <!-- ══ FLOAT WA ══ -->
 <div class="float-wa">
   <div class="float-wa-tip">WhatsApp-এ চ্যাট করুন</div>
@@ -762,6 +826,116 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 <button class="to-top" id="toTop" onclick="scrollTo({top:0,behavior:'smooth'})" aria-label="উপরে যান">&#8593;</button>
 
 <script>
+/* ── PRODUCTS DATA ── */
+const PRODUCTS = {
+  'DEMO-001':{name:'মডার্ন ডাইনিং সেট',price:14500},
+  'DEMO-002':{name:'এল-শেপ সোফা সেট',price:15200},
+  'DEMO-003':{name:'কিং সাইজ বেড ফ্রেম',price:13800},
+  'DEMO-004':{name:'এক্সিকিউটিভ অফিস চেয়ার',price:15900},
+  'DEMO-005':{name:'ওপেন বুকশেলফ',price:14200},
+  'DEMO-006':{name:'ভেলভেট ডাইনিং চেয়ার সেট',price:13500},
+  'DEMO-007':{name:'আউটডোর গার্ডেন সেট',price:16500},
+  'DEMO-008':{name:'৩ দরজা ওয়ার্ডরোব',price:15000},
+};
+
+/* ── CART STATE ── */
+let cart = [];
+
+function addToCart(id) {
+  const existing = cart.find(i => i.id === id);
+  if (existing) { existing.qty++; }
+  else { cart.push({id, qty:1}); }
+  renderCart();
+  showToast('✓ কার্টে যোগ হয়েছে — ' + PRODUCTS[id].name);
+}
+
+function buyNow(id) {
+  cart = [{id, qty:1}];
+  renderCart();
+  goToCheckout();
+}
+
+function changeQty(id, delta) {
+  const item = cart.find(i => i.id === id);
+  if (!item) return;
+  item.qty += delta;
+  if (item.qty < 1) cart = cart.filter(i => i.id !== id);
+  renderCart();
+}
+
+function removeItem(id) {
+  cart = cart.filter(i => i.id !== id);
+  renderCart();
+}
+
+function renderCart() {
+  const body = document.getElementById('dBody');
+  const foot = document.getElementById('dFoot');
+  const count = cart.reduce((s,i) => s+i.qty, 0);
+  const total = cart.reduce((s,i) => s + PRODUCTS[i.id].price * i.qty, 0);
+
+  document.getElementById('dCount').textContent = count;
+  document.getElementById('ctaBadge').textContent = count;
+  document.getElementById('ctaBadge').classList.toggle('show', count > 0);
+  document.getElementById('ctaBar').classList.toggle('show', count > 0);
+
+  if (cart.length === 0) {
+    body.innerHTML = '<div class="dempty"><span>🛒</span><p>কার্ট এখনও খালি</p></div>';
+    foot.style.display = 'none';
+    return;
+  }
+
+  body.innerHTML = cart.map(item => {
+    const p = PRODUCTS[item.id];
+    const sub = (p.price * item.qty).toLocaleString('en-BD');
+    return `<div class="citem">
+      <div class="citem-info">
+        <div class="citem-name">${p.name}</div>
+        <div class="citem-code">${item.id}</div>
+        <div class="citem-price">৳ ${sub}</div>
+        <div class="cqty">
+          <button onclick="changeQty('${item.id}',-1)">−</button>
+          <span class="cqty-n">${item.qty}</span>
+          <button onclick="changeQty('${item.id}',1)">+</button>
+        </div>
+      </div>
+      <button class="cdel" onclick="removeItem('${item.id}')" title="সরিয়ে দিন">✕</button>
+    </div>`;
+  }).join('');
+
+  document.getElementById('dTotal').textContent = '৳ ' + total.toLocaleString('en-BD');
+  foot.style.display = 'block';
+}
+
+function goToCheckout() {
+  if (cart.length === 0) return;
+  localStorage.setItem('checkout_items', JSON.stringify(
+    cart.map(i => ({...PRODUCTS[i.id], id:i.id, qty:i.qty}))
+  ));
+  window.location.href = 'checkout.html';
+}
+
+function openDrawer() {
+  document.getElementById('drawer').classList.add('open');
+  document.getElementById('dOv').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeDrawer() {
+  document.getElementById('drawer').classList.remove('open');
+  document.getElementById('dOv').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+let toastT;
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toastT);
+  toastT = setTimeout(() => t.classList.remove('show'), 2400);
+}
+
+/* ── NAV / HAMBURGER ── */
 const ham=document.getElementById('ham'),mob=document.getElementById('mobileNav');
 ham.addEventListener('click',()=>{
   mob.classList.toggle('open');
@@ -776,11 +950,15 @@ function closeMob(){
   mob.classList.remove('open');
   ham.querySelectorAll('span').forEach(x=>{x.style.transform='';x.style.opacity=''});
 }
+
+/* ── FAQ ── */
 function toggleFaq(el){
   const item=el.parentElement,open=item.classList.contains('open');
   document.querySelectorAll('.faq-item.open').forEach(i=>i.classList.remove('open'));
   if(!open)item.classList.add('open');
 }
+
+/* ── CATEGORY FILTER ── */
 document.querySelectorAll('.cat-pill').forEach(btn=>{
   btn.addEventListener('click',()=>{
     document.querySelectorAll('.cat-pill').forEach(b=>b.classList.remove('active'));
@@ -791,6 +969,8 @@ document.querySelectorAll('.cat-pill').forEach(btn=>{
     });
   });
 });
+
+/* ── SCROLL REVEAL ── */
 const obs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target)}});
 },{threshold:.1,rootMargin:'0px 0px -30px 0px'});
@@ -798,6 +978,9 @@ document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 window.addEventListener('scroll',()=>{
   document.getElementById('toTop').classList.toggle('show',scrollY>500);
 },{passive:true});
+
+/* ── INIT ── */
+renderCart();
 </script>
 </body>
 </html>
